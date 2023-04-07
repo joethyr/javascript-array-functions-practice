@@ -1,39 +1,55 @@
 const characters = [
-    {
-        name: 'Luke Skywalker',
-        height: 172,
-        mass: 77,
-        eye_color: 'blue',
-        gender: 'male',
-    },
-    {
-        name: 'Darth Vader',
-        height: 202,
-        mass: 136,
-        eye_color: 'yellow',
-        gender: 'male',
-    },
-    {
-        name: 'Leia Organa',
-        height: 150,
-        mass: 49,
-        eye_color: 'brown',
-        gender: 'female',
-    },
-    {
-        name: 'Anakin Skywalker',
-        height: 188,
-        mass: 84,
-        eye_color: 'blue',
-        gender: 'male',
-    },
+  {
+    name: "Luke Skywalker",
+    height: 172,
+    mass: 77,
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: 202,
+    mass: 136,
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: 150,
+    mass: 49,
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: 188,
+    mass: 84,
+    eye_color: "blue",
+    gender: "male",
+  },
 ];
 
 //***MAP***
+// map iterates through each item in a array and creates a new array with those items.
 //1. Get array of all names
+// let arrNames = characters.map((character) => character.name);
+// console.log(arrNames);
+
 //2. Get array of all heights
+let arrHeights = characters.map((character) => character.height);
+console.log(arrHeights);
 //3. Get array of objects with just name and height properties
+const arrNamesHeights = characters.map((character) => ({
+  name: character.name,
+  height: character.height,
+}));
+console.log(arrNamesHeights);
 //4. Get array of all first names
+let arrNames = characters.map((character) => character.name);
+let joe = arrNames.map((fullname) => {
+  return fullname.split(" ")[0];
+});
+console.log(joe);
 
 //***REDUCE***
 //1. Get total mass of all characters
