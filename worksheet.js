@@ -36,32 +36,73 @@ const characters = [
 // console.log(arrNames);
 
 //2. Get array of all heights
-let arrHeights = characters.map((character) => character.height);
-console.log(arrHeights);
+// let arrHeights = characters.map((character) => character.height);
+// console.log(arrHeights);
 //3. Get array of objects with just name and height properties
-const arrNamesHeights = characters.map((character) => ({
-  name: character.name,
-  height: character.height,
-}));
-console.log(arrNamesHeights);
+// const arrNamesHeights = characters.map((character) => ({
+//   name: character.name,
+//   height: character.height,
+// }));
+// console.log(arrNamesHeights);
 //4. Get array of all first names
-let arrNames = characters.map((character) => character.name);
-let joe = arrNames.map((fullname) => {
-  return fullname.split(" ")[0];
-});
-console.log(joe);
+// let arrNames = characters.map((character) => character.name);
+// let joe = arrNames.map((fullname) => {
+//   return fullname.split(" ")[0];
+// });
+// console.log(joe);
 
 //***REDUCE***
+// iterate through each item in a array and get some kind of result
+
 //1. Get total mass of all characters
+// const totalMass = characters.reduce((acc, cur) => acc + cur.mass, 0);
+// console.log(totalMass);
+
 //2. Get total height of all characters
+// const totalHeight = characters.reduce((acc, curr) => acc + curr.height, 0);
+// console.log(totalHeight);
+
 //3. Get total number of characters by eye color
+// const eyeColorCount = characters.reduce((acc, curr) => {
+//   if (acc[curr.eye_color]) {
+//     acc[curr.eye_color]++;
+//   } else {
+//     acc[curr.eye_color] = 1;
+//   }
+//   return acc;
+// }, {});
+// console.log(eyeColorCount);
+
 //4. Get total number of characters in all the character names
+// const totalCharacterNames = characters.reduce((acc, curr) => {
+//   return acc + curr.name.length - 1;
+// }, 0);
+// console.log(totalCharacterNames);
 
 //***FILTER***
+// filter out the values you dont wont in an array
+
 //1. Get characters with mass greater than 100
+// const bigCharacterMass = characters.filter((character) => character.mass > 100);
+// console.log(bigCharacterMass);
+
 //2. Get characters with height less than 200
+// const smallCharacterHeight = characters.filter(
+//   (character) => character.height < 200
+// );
+// console.log(smallCharacterHeight);
+
 //3. Get all male characters
+// const maleCharacters = characters.filter(
+//   (character) => character.gender == "male"
+// );
+// console.log(maleCharacters);
+
 //4. Get all female characters
+// const femaleCharacters = characters.filter(
+//   (character) => character.gender == "female"
+// );
+// console.log(femaleCharacters);
 
 //***SORT***
 //1. Sort by mass
