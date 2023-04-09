@@ -106,18 +106,72 @@ const characters = [
 
 //***SORT***
 //1. Sort by mass
+// const sortMass = characters.sort((a, b) => {
+//   return a.mass - b.mass;
+// });
+// console.log(sortMass);
+
 //2. Sort by height
+// const sortHeight = characters.sort((a, b) => {
+//   return a.height - b.height;
+// });
+
+// console.log(sortHeight);
+
 //3. Sort by name
+const sortName = characters.sort((a, b) => {
+  if (a.name > b.name) return -1;
+  return 1;
+});
+
+console.log(sortName);
 //4. Sort by gender
+const sortGender = characters.sort((a, b) => {
+  if (a.gender === "female") return -1;
+  return 1;
+});
+
+console.log(sortGender);
 
 //***EVERY***
+// every is given a condition and checks if every item in that array meets said condition
+// and returns if true or false
+
 //1. Does every character have blue eyes?
+// const allBlueEyes = characters.every(
+//   (character) => character.eye_color == "blue"
+// );
+// console.log(allBlueEyes);
+
 //2. Does every character have mass more than 40?
+// const allBigMass = characters.every((character) => character.mass > 40);
+// console.log(allBigMass);
+
 //3. Is every character shorter than 200?
+// const shortCharacters = characters.every((character) => character.height < 200);
+// console.log(shortCharacters);
+
 //4. Is every character male?
+// const allMaleCharacters = characters.every(
+//   (character) => character.gender === "male"
+// );
+// console.log(allMaleCharacters);
 
 //***SOME***
 //1. Is there at least one male character?
+const someMaleCharacters = characters.some(
+  (character) => character.gender === "male"
+);
+console.log(someMaleCharacters);
+
 //2. Is there at least one character with blue eyes?
+const someBlueEyes = characters.some((ch) => ch.eye_color === "blue");
+console.log(someBlueEyes);
+
 //3. Is there at least one character taller than 210?
+const someTallCharacters = characters.some((ch) => ch.height > 210);
+console.log(someTallCharacters);
+
 //4. Is there at least one character that has mass less than 50?
+const someSmallMass = characters.some((ch) => ch.mass < 50);
+console.log(someSmallMass);
